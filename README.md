@@ -112,8 +112,30 @@ Oracle 11g와 같은 대형 애플리케이션을 Docker 환경에서 최적화�
 위에 제시된 방법들을 통해 Docker 이미지를 최적화하고, 배포 속도를 개선하며, 비용 절감을 이룰 수 있습니다.
 
 
+> 코드 모음
+```bash
+# Install Oracle 11g in a separate stage
+FROM oraclelinux:7-slim as build
+WORKDIR /install
 
+# Oracle 11g 설치 파일 복사 및 설치
+COPY oracle_install_files /install/
+RUN ./install_oracle.sh
 
+# 최종 이미지로 필요한 부분만 복사
+FROM oraclelinux:7-slim
+COPY --from=build /oracle /oracle
+
+RUN yum install -y oracle-rdbms-server-11gR2-preinstall && \
+    yum clean all && \
+    rm -rf /var/cache/yum
+
+oracle_install_files/logs
+oracle_install_files/temporary_files
+
+docker-slim build --http-probe=false oracle11g_image
+
+```
 
 ---
 
