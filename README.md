@@ -1,5 +1,11 @@
 # Docker Image Optimization and Size Reduction: Tips & Tricks
 
+## 👨‍💻Team
+
+|<img src="https://avatars.githubusercontent.com/u/139302518?v=4" width="100" height="100"/>|<img src="https://avatars.githubusercontent.com/u/78792358?v=4" width="100" height="100"/>|
+|:-:|:-:|
+|곽병찬<br/>[@gato-46](https://github.com/gato-46)|박현우<br/>[@smartcow99](https://github.com/smartcow99)|
+
 ## 목표
 
 이 문서의 목표는 Docker 이미지를 최적화하고 크기를 줄이는 다양한 기법을 배우는 것입니다. 이러한 최적화 기법을 통해 리소스를 효율적으로 활용하고 배포 속도를 향상시키며 보안을 강화할 수 있습니다. 이를 통해 더 나은 개발 환경을 만들고 서비스 제공 시 비용을 절감하는 데 기여할 수 있습니다.
