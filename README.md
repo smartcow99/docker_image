@@ -1,4 +1,5 @@
 # Docker Image Optimization and Size Reduction: Tips & Tricks
+> 클라우드 AWS 구축시 참고자료
 
 ## 👨‍💻Team
 
